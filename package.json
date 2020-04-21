@@ -1,10 +1,10 @@
 {
-  "name": "TodoList_Tests",
+  "name": "todolist_tests",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
