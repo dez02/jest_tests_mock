@@ -1,4 +1,5 @@
 const User = require('./User');
+const TodoList = require('./TodoList');
 
 const util = require('./util');
 
@@ -57,5 +58,18 @@ describe('User', () => {
 
             expect(user.isFirstNameValid()).toBeFalsy();
         });
+
+    });
+
+    it('should allow to create a todoList', () => {
+
+        const item = {
+            firstname: 'foo',
+            lastname: 'bar',
+            email: 'blabla',
+            age: 13
+        }
+        const user = new User(item);
+        expect(user.createTodoList()).toBeTruthy();
     });
 });

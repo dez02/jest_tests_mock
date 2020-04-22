@@ -1,4 +1,5 @@
 const util = require('./util');
+const TodoList = require('./TodoList');
 
 class User {
     constructor(props) {
@@ -8,6 +9,7 @@ class User {
         this.lastname = lastname;
         this.email = email;
         this.age = age;
+        this.todoList = null;
     }
 
     isValid() {
@@ -28,6 +30,15 @@ class User {
 
     isLegalAge() {
         return this.age >= 13
+    }
+
+    createTodoList(){
+        if(this.todoList === null){
+            this.todoList = new TodoList();
+            return true
+        }
+        return false;
+
     }
 }
 

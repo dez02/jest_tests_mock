@@ -2,17 +2,7 @@ const Item = require('./Item');
 
 
 describe('Item', () => {
-	it.skip('should return ok if the name is unique', () => {
-
-		const item = new Item(["un", "deux", "trois"]);
-		expect(item.isNameUnique()).toBeTruthy();
-	});
-
-	it.skip('should return false if the name appears twice', () => {
-		const item = new Item(['first', 'second', 'first', 'third']);
-		expect(item.isNameUnique()).toBeFalsy();
-	});
-
+	
 	it('should return validContent', () => {
 		const data = {
 			'content':'this is a content'

@@ -1,16 +1,11 @@
 class Item {
-	constructor(props) {
-		const {names, content, date} = props;
-		this.names = names;
+	constructor(data) {
+		const {name, content, date} = data;
+		this.name = name;
 		this.content = content;
 		this.date = date;
 	}
 
-	isNameUnique(){
-		console.log(this.names);
-		return new Set(this.names).size === this.names.length;
-
-	}
 
 	isContentValid(){
 		return this.content.length <= 1000 ;
@@ -28,13 +23,3 @@ module.exports = Item;
 
 
 
-// isNameUnique() {
-// 	return new Set(this.names).size === this.names.length;
-// }
-// }
-
-// const items1 = new Items(["un", "deux", "trois"]);
-// const items2 = new Items(["un", "deux", ""]);
-
-// console.assert(items1.isNameUnique() === true);
-// console.assert(items2.isNameUnique() === false)
