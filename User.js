@@ -1,11 +1,13 @@
-const util = require('./util')
+const util = require('./util');
 
 class User {
-    constructor(obj) {
-        this.firstname = obj.firstname
-        this.lastname = obj.lastname
-        this.email = obj.email
-        this.age = obj.age
+    constructor(props) {
+        const {firstname, lastname, email, age} = props;
+
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.age = age;
     }
 
     isValid() {
